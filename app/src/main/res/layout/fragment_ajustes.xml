@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swiperefresh"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_ajustes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".AjustesFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:text="PERFIL"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:text="NOMBRE"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/et_nombre_ajustes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:text="APELLIDOS"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/et_apellidos_ajustes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:text="SALDO"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/et_saldo_ajustes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:text="EMAIL"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/et_email_ajustes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/bt_modificar_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginLeft="40sp"
+                android:layout_marginEnd="40sp"
+                android:layout_marginRight="40sp"
+                android:layout_marginBottom="50sp"
+                android:background="@drawable/rounded_botton"
+                android:fontFamily="@font/aldrich"
+                android:text="MODIFICAR PERFIL" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

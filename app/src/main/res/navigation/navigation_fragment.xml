@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_fragment"
+    app:startDestination="@id/tiendasFragment">
+
+    <fragment
+        android:id="@+id/tiendasFragment"
+        android:name="com.example.aplicaciongestiontiendas.TiendasFragment"
+        android:label="fragment_tiendas"
+        tools:layout="@layout/fragment_tiendas" />
+    <fragment
+        android:id="@+id/ajustesFragment"
+        android:name="com.example.aplicaciongestiontiendas.AjustesFragment"
+        android:label="fragment_ajustes"
+        tools:layout="@layout/fragment_ajustes" >
+        <action
+            android:id="@+id/action_ajustesFragment_to_updateFields"
+            app:destination="@id/updateFields" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFields"
+        android:name="com.example.aplicaciongestiontiendas.UpdateFields"
+        android:label="fragment_update_fields"
+        tools:layout="@layout/fragment_update_fields" />
+</navigation>

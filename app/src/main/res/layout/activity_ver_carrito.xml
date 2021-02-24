@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".verCarritoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:text="MI CARRITO"
+            android:textSize="30sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_lineasPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+            android:id="@+id/bt_tramitarPedido"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_botton"
+            android:fontFamily="@font/aldrich"
+            android:text="TRAMITAR PEDIDO"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
