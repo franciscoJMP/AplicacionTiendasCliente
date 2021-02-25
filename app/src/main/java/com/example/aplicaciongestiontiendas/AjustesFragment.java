@@ -96,6 +96,7 @@ public class AjustesFragment extends Fragment {
                         usuCompleto.setNombre(jsonObject.get("nombre").toString());
                         usuCompleto.setApellidos(jsonObject.get("apellidos").toString());
                         usuCompleto.setSaldo(Float.parseFloat(jsonObject.get("saldo").toString()));
+                        usuCompleto.setTipo(jsonObject.get("tipo").toString());
 
                         t1.setText(jsonObject.get("nombre").toString());
                         t2.setText(jsonObject.get("apellidos").toString());
