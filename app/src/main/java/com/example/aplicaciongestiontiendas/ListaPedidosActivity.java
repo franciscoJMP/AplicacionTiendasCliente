@@ -7,8 +7,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -23,7 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Date;
+
 
 import static com.example.aplicaciongestiontiendas.MainActivity.u;
 
@@ -64,6 +63,7 @@ public class ListaPedidosActivity extends AppCompatActivity {
     private void cargarPedidos(int idUsuario) {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Cargando pedidos usuario");
+        dialog.setCancelable(false);
         dialog.show();
         String url = "http://matfranvictor.atwebpages.com/listarPedidos.php?idUsuario="+idUsuario;
 

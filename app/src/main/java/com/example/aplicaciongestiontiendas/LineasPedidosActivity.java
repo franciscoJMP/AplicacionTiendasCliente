@@ -2,6 +2,7 @@ package com.example.aplicaciongestiontiendas;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -54,9 +55,10 @@ public class LineasPedidosActivity extends AppCompatActivity {
     private void cargarLineas() {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Cargando lineas del pedido");
+        dialog.setCancelable(false);
         dialog.show();
         String url = "http://matfranvictor.atwebpages.com/listarLineasPedido.php?idPedido="+p.getIdPedido();
-
+        Log.e("msg",url);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

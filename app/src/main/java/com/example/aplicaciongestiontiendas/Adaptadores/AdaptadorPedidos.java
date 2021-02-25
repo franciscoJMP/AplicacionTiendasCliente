@@ -70,7 +70,6 @@ public class AdaptadorPedidos extends RecyclerView.Adapter<AdaptadorPedidos.Adap
             public void onClick(View v) {
                 Intent i = new Intent(context, LineasPedidosActivity.class);
                 i.putExtra("pedido",p);
-                Toast.makeText(context, ""+ p.getIdPedido(), Toast.LENGTH_SHORT).show();
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
@@ -102,6 +101,7 @@ public class AdaptadorPedidos extends RecyclerView.Adapter<AdaptadorPedidos.Adap
 
         dialog = new ProgressDialog(context);
         dialog.setMessage("Borrando pedido...");
+        dialog.setCancelable(false);
         dialog.show();
         String url = "http://matfranvictor.atwebpages.com/borrarPedido.php?idPedido=" + p.getIdPedido();
 

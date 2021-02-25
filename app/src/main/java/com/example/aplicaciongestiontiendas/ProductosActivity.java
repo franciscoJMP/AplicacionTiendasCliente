@@ -58,6 +58,7 @@ public class ProductosActivity extends AppCompatActivity {
     private void cargarProductos() {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Cargando Productos");
+        dialog.setCancelable(false);
         dialog.show();
         String url = "http://matfranvictor.atwebpages.com/listarProductos.php?tienda=" + t.getIdTienda();
 

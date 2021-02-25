@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -69,11 +70,10 @@ public class verCarritoActivity extends AppCompatActivity{
     private void cargarUsuario() {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Tramitando pedido...");
+        dialog.setCancelable(false);
         dialog.show();
         String correoAux = "\"" + u.getCorreo() + "\"";
-
         String url = "http://matfranvictor.atwebpages.com/consultarUsuario.php?correo=" + correoAux;
-
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -87,7 +87,6 @@ public class verCarritoActivity extends AppCompatActivity{
                         usu.setApellidos(jsonObject.get("apellidos").toString());
                         usu.setSaldo(Float.parseFloat(jsonObject.get("saldo").toString()));
                         usu.setIdUsuario(Integer.parseInt(jsonObject.get("idUsuario").toString()));
-
                         tramitarPedido(usu);
                     }
                 } catch (JSONException e) {
@@ -111,7 +110,6 @@ public class verCarritoActivity extends AppCompatActivity{
         int saldoPositivo=isPossitiveSaldo(usuario.getSaldo());
         modificarSaldoUsuario(usuario);
         String url = "http://matfranvictor.atwebpages.com/crearPedido.php?pagado="+saldoPositivo+"&idUsuario="+usuario.getIdUsuario();
-
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -210,6 +208,7 @@ public class verCarritoActivity extends AppCompatActivity{
                 +"&cantidad="
                 +ln.getCantidad()
                 +"&precio="+ln.getPrecio();
+        Log.e("msg",url);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -233,9 +232,6 @@ public class verCarritoActivity extends AppCompatActivity{
         dialog.dismiss();
         dialog.hide();
         Volley.newRequestQueue(this).add(stringRequest);
-
-
-
     }
 
     private int isPossitiveSaldo(double saldo) {

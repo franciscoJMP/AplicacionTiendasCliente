@@ -113,6 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void comprobarCredenciales(String correo, String pass) {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Accediendo...");
+        dialog.setCancelable(false);
         String correoAux = "\"" +correo+ "\"";
         String passAux = "\""+pass+"\"";
         String url = "http://matfranvictor.atwebpages.com/login.php?correo=" + correoAux+"&pass="+passAux;

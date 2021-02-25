@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,15 +72,14 @@ public class ModificarPerfil extends AppCompatActivity {
         if (saldo.isEmpty()) {
             saldoAux = null;
         }else{
-            saldoAux = "\"" + saldo + "\"";
+            saldoAux = saldo;
         }
 
 
 
         saldoAux = "\"" + saldo + "\"";
         String cooreoAux = "\"" + usu.getCorreo() + "\"";
-        String url = "http://matfranvictor.atwebpages.com/actualizarUsuario.php?correo="+cooreoAux+"&nombre="+nombreAux+"&apellidos=" + apellidosAux + "&saldo=" + saldoAux;
-
+        String url = "http://matfranvictor.atwebpages.com/actualizarUsuario.php?correo="+cooreoAux+"&nombre="+nombreAux+"&apellidos=" + apellidosAux + "&saldo=" + saldoAux+"&tipo="+"\"cliente\"";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

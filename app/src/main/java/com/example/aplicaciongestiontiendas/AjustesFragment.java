@@ -82,9 +82,7 @@ public class AjustesFragment extends Fragment {
 
     public void cargarUsuario() {
         String correoAux = "\"" + u.getCorreo() + "\"";
-
         String url = "http://matfranvictor.atwebpages.com/consultarUsuario.php?correo=" + correoAux;
-
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
